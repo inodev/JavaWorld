@@ -1,97 +1,97 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-// === ¢ŠEƒNƒ‰ƒX ===
-// ƒVƒ“ƒOƒ‹ƒgƒ“‚Å¢ŠE‚É‹N‚±‚éŒ»Û‚É‚Â‚¢‚Ä‹Lq‚·‚éB
-// ¢ŠE‚É‘¶İ‚·‚é¶•¨‚ğŠÇ—‚µA¶•¨“™‚©‚ç‚Ì€–SEoYMSG“™‚É‚æ‚Á‚Äˆ—‚ğs‚¤B
+// === ä¸–ç•Œã‚¯ãƒ©ã‚¹ ===
+// ã‚·ãƒ³ã‚°ãƒ«ãƒˆãƒ³ã§ä¸–ç•Œã«èµ·ã“ã‚‹ç¾è±¡ã«ã¤ã„ã¦è¨˜è¿°ã™ã‚‹ã€‚
+// ä¸–ç•Œã«å­˜åœ¨ã™ã‚‹ç”Ÿç‰©ã‚’ç®¡ç†ã—ã€ç”Ÿç‰©ç­‰ã‹ã‚‰ã®æ­»äº¡ãƒ»å‡ºç”£MSGç­‰ã«ã‚ˆã£ã¦å‡¦ç†ã‚’è¡Œã†ã€‚
 public final class World {
   
-  private static final World instance   = new World();              // ƒVƒ“ƒOƒ‹ƒgƒ“ƒCƒ“ƒXƒ^ƒ“ƒX
-  public  Random             rnd        = new Random();             // —”i‰^–½j
-  private ArrayList<Animal>  animalList = new ArrayList<Animal>();  // ‘¶İ‚·‚é¶•¨ƒŠƒXƒg
-  private ArrayList<Animal>  deadList   = new ArrayList<Animal>();  // ¶•¨‚Ì€–S’Ê’mƒŠƒXƒg
-  private int                year;                                  // ¢ŠE—ğ
-  private int                endYear;                               // I—¹‚·‚é”N
-  private boolean            event;                                 // ‚»‚Ì”N‚ÌƒCƒxƒ“ƒg—L–³
+  private static final World instance   = new World();              // ã‚·ãƒ³ã‚°ãƒ«ãƒˆãƒ³ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
+  public  Random             rnd        = new Random();             // ä¹±æ•°ï¼ˆé‹å‘½ï¼‰
+  private ArrayList<Animal>  animalList = new ArrayList<Animal>();  // å­˜åœ¨ã™ã‚‹ç”Ÿç‰©ãƒªã‚¹ãƒˆ
+  private ArrayList<Animal>  deadList   = new ArrayList<Animal>();  // ç”Ÿç‰©ã®æ­»äº¡é€šçŸ¥ãƒªã‚¹ãƒˆ
+  private int                year;                                  // ä¸–ç•Œæ­´
+  private int                endYear;                               // çµ‚äº†ã™ã‚‹å¹´
+  private boolean            event;                                 // ãã®å¹´ã®ã‚¤ãƒ™ãƒ³ãƒˆæœ‰ç„¡
   
-  // ƒRƒ“ƒXƒgƒ‰ƒNƒ^–³Œø‰»
+  // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ç„¡åŠ¹åŒ–
   private World() {}
 
-  // ƒCƒ“ƒXƒ^ƒ“ƒXæ“¾iƒVƒ“ƒOƒ‹ƒgƒ“‚È‚Ì‚Ånew‚Å‚Í‚È‚­“–ƒƒ\ƒbƒh‚ÅƒCƒ“ƒXƒ^ƒ“ƒX‚ğæ“¾‚µ‚Äg—pj
+  // ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å–å¾—ï¼ˆã‚·ãƒ³ã‚°ãƒ«ãƒˆãƒ³ãªã®ã§newã§ã¯ãªãå½“ãƒ¡ã‚½ãƒƒãƒ‰ã§ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’å–å¾—ã—ã¦ä½¿ç”¨ï¼‰
   public static World getInstance() {
     return instance;
   }
 
-  // ¢ŠE—ğ‚ÆŒÀŠEŠÔ‚Ìİ’è
+  // ä¸–ç•Œæ­´ã¨é™ç•Œæ™‚é–“ã®è¨­å®š
   public void setYear(int year, int span){
     this.year = year;
     this.endYear = year + span;
   }
 
-  // ¢ŠE‚ÌŠÔ‚ğis
+  // ä¸–ç•Œã®æ™‚é–“ã‚’é€²è¡Œ
   public void pastTime(){
-    this.event = false;                                 // ƒCƒxƒ“ƒgƒNƒŠƒA
+    this.event = false;                                 // ã‚¤ãƒ™ãƒ³ãƒˆã‚¯ãƒªã‚¢
       
-      for (int i = 0 ; i < animalList.size() ; i++){    // ‘S¶•¨‚ÌŠÔ‚ğis
+      for (int i = 0 ; i < animalList.size() ; i++){    // å…¨ç”Ÿç‰©ã®æ™‚é–“ã‚’é€²è¡Œ
         animalList.get(i).pastTime();
       }
-      for (Animal animal: deadList){                    // ‘S€–S’Ê’mƒŠƒXƒg‚Ì”½‰f
+      for (Animal animal: deadList){                    // å…¨æ­»äº¡é€šçŸ¥ãƒªã‚¹ãƒˆã®åæ˜ 
         animalList.remove(animalList.indexOf(animal));
       }
       deadList.clear();
       
     year++;
   }
-  // ƒCƒxƒ“ƒg‚É¢ŠE—ğ•\¦
+  // ã‚¤ãƒ™ãƒ³ãƒˆæ™‚ã«ä¸–ç•Œæ­´è¡¨ç¤º
   public void yearDisp(){
     if (this.event == false){
       this.event = true;
-      System.out.println("<¢ŠE—ğ"+year+"”N>");
+      System.out.println("<ä¸–ç•Œæ­´"+year+"å¹´>");
     }
   }
-  //@¶•¨€–S’Ê’mƒƒ\ƒbƒhiHuman‚©‚ç€–S’Ê’mj
+  //ã€€ç”Ÿç‰©æ­»äº¡é€šçŸ¥ãƒ¡ã‚½ãƒƒãƒ‰ï¼ˆHumanã‹ã‚‰æ­»äº¡é€šçŸ¥ï¼‰
   public void setDead(Animal animal){
     deadList.add(animal);
   }
 
-  // ¶•¨oYƒƒ\ƒbƒh
+  // ç”Ÿç‰©å‡ºç”£ãƒ¡ã‚½ãƒƒãƒ‰
   public void setBorn(Animal animal){
     animalList.add(animal);
   }
 
-  // Šm—¦¬”Û”»’èƒƒ\ƒbƒh
+  // ç¢ºç‡æˆå¦åˆ¤å®šãƒ¡ã‚½ãƒƒãƒ‰
   public boolean successPercent(int num){
     if (num <=rnd.nextInt(100)+1)return true;
     return false;
   }
 
-  // o‰ï‚¢ƒƒ\ƒbƒh
+  // å‡ºä¼šã„ãƒ¡ã‚½ãƒƒãƒ‰
   public Animal matching(Animal cliant){
-    ArrayList<Animal> partnerTarget = new ArrayList<Animal>();  // ‘ŠèŒó•â
+    ArrayList<Animal> partnerTarget = new ArrayList<Animal>();  // ç›¸æ‰‹å€™è£œ
     partnerTarget.clear();
     
     for (Animal target: this.animalList){
-      if (target.getLive()==true&&                 // ‘¶–½
-        target.getClass()==cliant.getClass() &&    // “¯‚¶í‘°
-        target.getSex()!=cliant.getSex())          // ˆÙ«
+      if (target.getLive()==true&&                 // å­˜å‘½
+        target.getClass()==cliant.getClass() &&    // åŒã˜ç¨®æ—
+        target.getSex()!=cliant.getSex())          // ç•°æ€§
       {
         partnerTarget.add(target);
       }
     }
-    if (partnerTarget.isEmpty())return null;       // ‘ÎÛ‚È‚µ
+    if (partnerTarget.isEmpty())return null;       // å¯¾è±¡ãªã—
     
     Animal target = partnerTarget.get(this.rnd.nextInt(partnerTarget.size()));
-    return target;                                 // ‚Pl‘I‘ğ
+    return target;                                 // ï¼‘äººé¸æŠ
   }
 
-  // ¢ŠE‚ÌI—¹ğŒæ“¾
+  // ä¸–ç•Œã®çµ‚äº†æ¡ä»¶å–å¾—
   public boolean getContinueStatus(){
     if (animalList.isEmpty()){
-      System.out.println("‚»‚µ‚Ä’N‚à‚¢‚È‚­‚È‚Á‚½‚Ì‚Å‚µ‚½EEEB");
+      System.out.println("ãã—ã¦èª°ã‚‚ã„ãªããªã£ãŸã®ã§ã—ãŸãƒ»ãƒ»ãƒ»ã€‚");
       return false;
     }
     if (this.year >= this.endYear){
-      System.out.println(this.year+"”NA¢ŠE‚Í–ğ–Ú‚ğI‚¦‚½‚Ì‚Å‚µ‚½EEEB");
+      System.out.println(this.year+"å¹´ã€ä¸–ç•Œã¯å½¹ç›®ã‚’çµ‚ãˆãŸã®ã§ã—ãŸãƒ»ãƒ»ãƒ»ã€‚");
       return false;
     }
     return true;

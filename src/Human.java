@@ -1,49 +1,49 @@
-// ƒCƒxƒ“ƒg‚Ìí—Ş
+// ã‚¤ãƒ™ãƒ³ãƒˆã®ç¨®é¡
 enum eventType {
-  CHARACTERIZATION,    // «ŠiŒ`¬
-  ASSOCIATE,           // ŒğÛ
-  BREAKUP,             // •Ê‚ê
-  MARRIAGE,            // Œ‹¥
-  DIVORCE,             // —£¥
-  CHAILDBORN,          // q‹Ÿ’a¶
-  DEAD,                // €–S
+  CHARACTERIZATION,    // æ€§æ ¼å½¢æˆ
+  ASSOCIATE,           // äº¤éš›
+  BREAKUP,             // åˆ¥ã‚Œ
+  MARRIAGE,            // çµå©š
+  DIVORCE,             // é›¢å©š
+  CHAILDBORN,          // å­ä¾›èª•ç”Ÿ
+  DEAD,                // æ­»äº¡
 };
 
-// «Ši‚Ìí—Ş
+// æ€§æ ¼ã®ç¨®é¡
 enum charaType {
   COOL,
   FUNNY,
   STRAIGHT,
 };
 
-// === lŠÔƒNƒ‰ƒX ===
-// “®•¨ƒNƒ‰ƒX‚Ì‘ã•\B—lX‚ÈƒCƒxƒ“ƒg‚É‚æ‚è‘¼‚Ì“®•¨‚â¢ŠE‚É‰e‹¿‚ğ—^‚¦‚éB
+// === äººé–“ã‚¯ãƒ©ã‚¹ ===
+// å‹•ç‰©ã‚¯ãƒ©ã‚¹ã®ä»£è¡¨ã€‚æ§˜ã€…ãªã‚¤ãƒ™ãƒ³ãƒˆã«ã‚ˆã‚Šä»–ã®å‹•ç‰©ã‚„ä¸–ç•Œã«å½±éŸ¿ã‚’ä¸ãˆã‚‹ã€‚
 public class Human extends Animal{
 
-  World world = World.getInstance();  // ¢ŠEƒNƒ‰ƒXƒCƒ“ƒXƒ^ƒ“ƒXæ“¾
-  private charaType  myChara;         // ©g‚Ì«Ši
-  private charaType  unlikeChara;     // ‹êè‚È«Ši
-  private Human    associate;         // ŒğÛ‘Šè
-  private Human    marriage;          // Œ‹¥‘Šè
-  private int     childenNum;         // q‹Ÿ‚Ì”
+  World world = World.getInstance();  // ä¸–ç•Œã‚¯ãƒ©ã‚¹ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å–å¾—
+  private charaType  myChara;         // è‡ªèº«ã®æ€§æ ¼
+  private charaType  unlikeChara;     // è‹¦æ‰‹ãªæ€§æ ¼
+  private Human    associate;         // äº¤éš›ç›¸æ‰‹
+  private Human    marriage;          // çµå©šç›¸æ‰‹
+  private int     childenNum;         // å­ä¾›ã®æ•°
 
   Human(String name, SEX sex){
-    this.setName(name);               // –¼‘Oİ’è
-    this.setSex(sex);                 // «•Êİ’è
-    this.myChara  = null;             // «Ši‰Šú‰»
-    this.unlikeChara= null;           // ‹êè‚È«Ši‰Šú‰»
-    this.associate  = null;           // ŒğÛ‘Šè‰Šú‰»
-    this.marriage  = null;            // Œ‹¥‘Šè‰Šú‰»
-    this.childenNum  = 0;             // q‹Ÿ‚Ì”‰Šú‰»
+    this.setName(name);               // åå‰è¨­å®š
+    this.setSex(sex);                 // æ€§åˆ¥è¨­å®š
+    this.myChara  = null;             // æ€§æ ¼åˆæœŸåŒ–
+    this.unlikeChara= null;           // è‹¦æ‰‹ãªæ€§æ ¼åˆæœŸåŒ–
+    this.associate  = null;           // äº¤éš›ç›¸æ‰‹åˆæœŸåŒ–
+    this.marriage  = null;            // çµå©šç›¸æ‰‹åˆæœŸåŒ–
+    this.childenNum  = 0;             // å­ä¾›ã®æ•°åˆæœŸåŒ–
 
   }
-  // ƒAƒNƒZƒbƒTƒƒ\ƒbƒh
-  public charaType getChara(){return this.myChara;}          // «Šiæ“¾
-  public Human getAssociate(){return this.associate;}        // ŒğÛ‘Šèæ“¾
-  public Human getMarriage(){return this.marriage;}          // Œ‹¥‘Šèæ“¾
-  public void setAssociate(Human partner){this.associate = partner;}  // ŒğÛ‘Šè“o˜^
-  public void setMarriage(Human partner){this.marriage = partner;}  // Œ‹¥‘Šè“o˜^
-  // •t‚«‡‚¢”»’èƒƒ\ƒbƒh
+  // ã‚¢ã‚¯ã‚»ãƒƒã‚µãƒ¡ã‚½ãƒƒãƒ‰
+  public charaType getChara(){return this.myChara;}          // æ€§æ ¼å–å¾—
+  public Human getAssociate(){return this.associate;}        // äº¤éš›ç›¸æ‰‹å–å¾—
+  public Human getMarriage(){return this.marriage;}          // çµå©šç›¸æ‰‹å–å¾—
+  public void setAssociate(Human partner){this.associate = partner;}  // äº¤éš›ç›¸æ‰‹ç™»éŒ²
+  public void setMarriage(Human partner){this.marriage = partner;}  // çµå©šç›¸æ‰‹ç™»éŒ²
+  // ä»˜ãåˆã„åˆ¤å®šãƒ¡ã‚½ãƒƒãƒ‰
   public boolean love(Animal animal){
     if ( animal.getClass()==this.getClass()&&
       (animal.getAge() < (this.getAge() + this.getAge()/3))||
@@ -52,21 +52,21 @@ public class Human extends Animal{
     }
     return false;
   }
-  // ƒCƒxƒ“ƒgˆ—
+  // ã‚¤ãƒ™ãƒ³ãƒˆå‡¦ç†
   public int event(){
-    // ŠúŒÅ’èƒCƒxƒ“ƒg
+    // æ™‚æœŸå›ºå®šã‚¤ãƒ™ãƒ³ãƒˆ
     switch(this.getAge()){
-    case   0:msg("‚ª¶‚Ü‚ê‚Ü‚µ‚½B");break;
-    case   6:msg("‚ª¬Šw¶‚É‚È‚è‚Ü‚µ‚½B");break;
-    case  12:msg("‚ª’†Šw¶‚É‚È‚è‚Ü‚µ‚½B");break;
-    case  15:msg("‚ª‚Z¶‚É‚È‚è‚Ü‚µ‚½B");break;
+    case   0:msg("ãŒç”Ÿã¾ã‚Œã¾ã—ãŸã€‚");break;
+    case   6:msg("ãŒå°å­¦ç”Ÿã«ãªã‚Šã¾ã—ãŸã€‚");break;
+    case  12:msg("ãŒä¸­å­¦ç”Ÿã«ãªã‚Šã¾ã—ãŸã€‚");break;
+    case  15:msg("ãŒé«˜æ ¡ç”Ÿã«ãªã‚Šã¾ã—ãŸã€‚");break;
     case  20:happen(eventType.CHARACTERIZATION,100);break;
-    case  60:msg("‚ªŠÒ—ï‚ğŒ}‚¦‚Ü‚µ‚½B");break;
+    case  60:msg("ãŒé‚„æš¦ã‚’è¿ãˆã¾ã—ãŸã€‚");break;
     case 110:happen(eventType.DEAD,100);break;
     default:
     }
-    // Šú•ªUƒCƒxƒ“ƒg
-    switch(this.getAge()/10*10){  // 10‘ã‚İ‚Å–ˆ”N”»’è
+    // æ™‚æœŸåˆ†æ•£ã‚¤ãƒ™ãƒ³ãƒˆ
+    switch(this.getAge()/10*10){  // 10ä»£åˆ»ã¿ã§æ¯å¹´åˆ¤å®š
     case 0:
       happen(eventType.CHARACTERIZATION,1);
       break;
@@ -125,76 +125,76 @@ public class Human extends Animal{
     return 0;
   }
 
-  // ŠeíƒCƒxƒ“ƒgˆ—
+  // å„ç¨®ã‚¤ãƒ™ãƒ³ãƒˆå‡¦ç†
   private boolean happen(eventType execEvent, int per){
-    // ƒCƒxƒ“ƒg”­¶Šm”F
-    if ( world.successPercent(per) ||  // ƒCƒxƒ“ƒgƒGƒ“ƒJƒEƒ“ƒgŠm—¦
-       badStatus(execEvent))      // ŒÂ•Ê”­¶ğŒEŠm—¦
+    // ã‚¤ãƒ™ãƒ³ãƒˆç™ºç”Ÿç¢ºèª
+    if ( world.successPercent(per) ||  // ã‚¤ãƒ™ãƒ³ãƒˆã‚¨ãƒ³ã‚«ã‚¦ãƒ³ãƒˆç¢ºç‡
+       badStatus(execEvent))      // å€‹åˆ¥ç™ºç”Ÿæ¡ä»¶ãƒ»ç¢ºç‡
     {
       return false;
     }
 
-    // —LŒøƒCƒxƒ“ƒg‚Ì“®ì
+    // æœ‰åŠ¹ã‚¤ãƒ™ãƒ³ãƒˆã®å‹•ä½œ
     switch(execEvent){
-    case CHARACTERIZATION:                   // «ŠiŒ`¬ƒCƒxƒ“ƒg
-      // ƒ‰ƒ“ƒ_ƒ€‚É«ŠiŠ„‚è“–‚Ä
-      // =>Java‚Å‚Í—ñ‹“‘Ì‚Æ”’l‚ªŒİŠ·‚Åg‚¢‚Ã‚ç‚¢ˆ×A”z—ñ‰»‚µ‚Ä‚©‚çƒ‰ƒ“ƒ_ƒ€‚È—v‘f‚ÅŠ„‚è“–‚Ä‚Ä‚¢‚éB
+    case CHARACTERIZATION:                   // æ€§æ ¼å½¢æˆã‚¤ãƒ™ãƒ³ãƒˆ
+      // ãƒ©ãƒ³ãƒ€ãƒ ã«æ€§æ ¼å‰²ã‚Šå½“ã¦
+      // =>Javaã§ã¯åˆ—æŒ™ä½“ã¨æ•°å€¤ãŒäº’æ›ã§ä½¿ã„ã¥ã‚‰ã„ç‚ºã€é…åˆ—åŒ–ã—ã¦ã‹ã‚‰ãƒ©ãƒ³ãƒ€ãƒ ãªè¦ç´ ã§å‰²ã‚Šå½“ã¦ã¦ã„ã‚‹ã€‚
       charaType[] charalist = charaType.values();
       this.myChara  = charalist[world.rnd.nextInt(charalist.length)];
       this.unlikeChara= charalist[world.rnd.nextInt(charalist.length)];
-      msg("‚Íu"+this.myChara.toString()+"v‚È«Ši‚Ì‚æ‚¤‚Å‚·B"
-          + "u"+this.unlikeChara.toString()+"v‚Èl‚Æ‚Í‚ ‚Ü‚è‘Š«‚Í—Ç‚­‚È‚¢‚æ‚¤‚Å‚·B");
+      msg("ã¯ã€Œ"+this.myChara.toString()+"ã€ãªæ€§æ ¼ã®ã‚ˆã†ã§ã™ã€‚"
+          + "ã€Œ"+this.unlikeChara.toString()+"ã€ãªäººã¨ã¯ã‚ã¾ã‚Šç›¸æ€§ã¯è‰¯ããªã„ã‚ˆã†ã§ã™ã€‚");
       break;
 
-    case ASSOCIATE:                          // ŒğÛƒCƒxƒ“ƒg
+    case ASSOCIATE:                          // äº¤éš›ã‚¤ãƒ™ãƒ³ãƒˆ
       Human target = (Human)world.matching(this);
-      if (target==null ||                    // ‘ÎÛ‚ª‚¢‚È‚¢
-        this.love(target)==false)            // ©•ª‚ÌD‚İ‚Å‚Í‚È‚¢
+      if (target==null ||                    // å¯¾è±¡ãŒã„ãªã„
+        this.love(target)==false)            // è‡ªåˆ†ã®å¥½ã¿ã§ã¯ãªã„
       {
-        msg("‚Í’N‚©‚Æ•t‚«‡‚¢‚½‚¢‚Æv‚Á‚Ä‚¢‚é‚æ‚¤‚Å‚·B");
+        msg("ã¯èª°ã‹ã¨ä»˜ãåˆã„ãŸã„ã¨æ€ã£ã¦ã„ã‚‹ã‚ˆã†ã§ã™ã€‚");
       }
-      else if (target.getAssociate()!=null)  // ‘Šè‚ªŒğÛ’†
+      else if (target.getAssociate()!=null)  // ç›¸æ‰‹ãŒäº¤éš›ä¸­
       {
-        msg("‚Í"+target.getName()+"‚ªD‚«‚Å‚µ‚½‚ªAŠù‚É"+target.getAssociate().getName()+"‚Æ•t‚«‡‚Á‚Ä‚¢‚½ˆ×’ú‚ß‚½‚æ‚¤‚Å‚·B");
+        msg("ã¯"+target.getName()+"ãŒå¥½ãã§ã—ãŸãŒã€æ—¢ã«"+target.getAssociate().getName()+"ã¨ä»˜ãåˆã£ã¦ã„ãŸç‚ºè«¦ã‚ãŸã‚ˆã†ã§ã™ã€‚");
       }
-      else if (target.love(this)==false)     // ‘Šè‚ÌD‚İ‚Å‚Í‚È‚¢
+      else if (target.love(this)==false)     // ç›¸æ‰‹ã®å¥½ã¿ã§ã¯ãªã„
       {
-        msg("‚Í"+target.getName()+"i"+target.getAge()+"Îj‚É”’‚µ‚Ä‹ÊÓ‚µ‚Ü‚µ‚½B");
+        msg("ã¯"+target.getName()+"ï¼ˆ"+target.getAge()+"æ­³ï¼‰ã«å‘Šç™½ã—ã¦ç‰ç •ã—ã¾ã—ãŸã€‚");
       }
-      else                                   // ŒğÛğŒƒNƒŠƒA
+      else                                   // äº¤éš›æ¡ä»¶ã‚¯ãƒªã‚¢
       {
-        if (this.marriage!=null ||           // ‘Šè‚ªŒ‹¥Ï
-          target.getMarriage()!=null)        // ‘Šè‚ªŒ‹¥Ï
+        if (this.marriage!=null ||           // ç›¸æ‰‹ãŒçµå©šæ¸ˆ
+          target.getMarriage()!=null)        // ç›¸æ‰‹ãŒçµå©šæ¸ˆ
         {
-          msg("‚Í"+target.getName()+"i"+target.getAge()+"Îj‚Æ•s—Ï’†‚Ì‚æ‚¤‚Å‚·B");
+          msg("ã¯"+target.getName()+"ï¼ˆ"+target.getAge()+"æ­³ï¼‰ã¨ä¸å€«ä¸­ã®ã‚ˆã†ã§ã™ã€‚");
         }else{
-          msg("‚Í"+target.getName()+"i"+target.getAge()+"Îj‚Æ•t‚«‡‚¢n‚ß‚Ü‚µ‚½B");
+          msg("ã¯"+target.getName()+"ï¼ˆ"+target.getAge()+"æ­³ï¼‰ã¨ä»˜ãåˆã„å§‹ã‚ã¾ã—ãŸã€‚");
         }
         this.associate = target;
         target.setAssociate(this);
       }
       break;
 
-    case BREAKUP:  // •Ê‚êƒCƒxƒ“ƒg
-      msg("‚Í"+this.associate.getName()+"i"+this.associate.getAge()+"Îj‚Æ•Ê‚ê‚Ü‚µ‚½B");
+    case BREAKUP:  // åˆ¥ã‚Œã‚¤ãƒ™ãƒ³ãƒˆ
+      msg("ã¯"+this.associate.getName()+"ï¼ˆ"+this.associate.getAge()+"æ­³ï¼‰ã¨åˆ¥ã‚Œã¾ã—ãŸã€‚");
       this.associate.setAssociate(null);
       this.associate = null;
       break;
 
-    case MARRIAGE:  // Œ‹¥ƒCƒxƒ“ƒg
-      msg("‚Æ"+this.associate.getName()+"i"+this.associate.getAge()+"Îj‚ªŒ‹¥‚µ‚Ü‚µ‚½I");
+    case MARRIAGE:  // çµå©šã‚¤ãƒ™ãƒ³ãƒˆ
+      msg("ã¨"+this.associate.getName()+"ï¼ˆ"+this.associate.getAge()+"æ­³ï¼‰ãŒçµå©šã—ã¾ã—ãŸï¼");
       this.marriage  = this.associate;
       this.associate.setMarriage(this);
       this.associate.setAssociate(null);
       break;
 
-    case DIVORCE:  // —£¥ƒCƒxƒ“ƒg
-      msg("‚ª—£¥‚µ‚Ü‚µ‚½EEEB");
-      this.marriage.setMarriage(null);      // ‘Šè‚ÌŒ‹¥‘Šè‚©‚ç©•ª‚ğ”jŠü
-      this.marriage=null;                   // ©•ª‚ÌŒ‹¥‘Šè‚©‚ç‘Šè‚ğ”jŠü
+    case DIVORCE:  // é›¢å©šã‚¤ãƒ™ãƒ³ãƒˆ
+      msg("ãŒé›¢å©šã—ã¾ã—ãŸãƒ»ãƒ»ãƒ»ã€‚");
+      this.marriage.setMarriage(null);      // ç›¸æ‰‹ã®çµå©šç›¸æ‰‹ã‹ã‚‰è‡ªåˆ†ã‚’ç ´æ£„
+      this.marriage=null;                   // è‡ªåˆ†ã®çµå©šç›¸æ‰‹ã‹ã‚‰ç›¸æ‰‹ã‚’ç ´æ£„
       break;
 
-    case CHAILDBORN:  // oYƒCƒxƒ“ƒg
+    case CHAILDBORN:  // å‡ºç”£ã‚¤ãƒ™ãƒ³ãƒˆ
       SEX babySex; 
       String babyName;
       if (world.rnd.nextInt(2)==1){
@@ -205,13 +205,13 @@ public class Human extends Animal{
         babyName=femaleName[world.rnd.nextInt(femaleName.length)];
       }
       this.childenNum++;
-      msg("‚É"+childenNum+"l–Ú‚Ìq‹Ÿ‚ªo—ˆ‚Ü‚µ‚½B–¼‘O‚Í"+babyName+"‚Å‚·B");
+      msg("ã«"+childenNum+"äººç›®ã®å­ä¾›ãŒå‡ºæ¥ã¾ã—ãŸã€‚åå‰ã¯"+babyName+"ã§ã™ã€‚");
       Human baby = new Human(babyName, babySex);
-      world.setBorn(baby);            // oYF¢ŠE‚Éq‹Ÿ‚ğ’Ç‰Á
+      world.setBorn(baby);            // å‡ºç”£ï¼šä¸–ç•Œã«å­ä¾›ã‚’è¿½åŠ 
       break;
 
-    case DEAD:  // €–SƒCƒxƒ“ƒg
-      msg("‚ªˆÀ‚ç‚©‚È–°‚è‚É‚Â‚«‚Ü‚µ‚½EEEB");
+    case DEAD:  // æ­»äº¡ã‚¤ãƒ™ãƒ³ãƒˆ
+      msg("ãŒå®‰ã‚‰ã‹ãªçœ ã‚Šã«ã¤ãã¾ã—ãŸãƒ»ãƒ»ãƒ»ã€‚");
       this.setDead();
         world.setDead(this);
       break;
@@ -219,23 +219,23 @@ public class Human extends Animal{
     return true;
   }
 
-  // ŠeíƒCƒxƒ“ƒg¸”sğŒ
+  // å„ç¨®ã‚¤ãƒ™ãƒ³ãƒˆå¤±æ•—æ¡ä»¶
   private boolean badStatus(eventType eventstatus){
-    if (this.getLive() == false){       // €–Sƒtƒ‰ƒO‚Å‘SƒCƒxƒ“ƒg–³Œø
+    if (this.getLive() == false){       // æ­»äº¡ãƒ•ãƒ©ã‚°ã§å…¨ã‚¤ãƒ™ãƒ³ãƒˆç„¡åŠ¹
       return true;
     }
-    // ƒCƒxƒ“ƒg•Ê”»’è
+    // ã‚¤ãƒ™ãƒ³ãƒˆåˆ¥åˆ¤å®š
     switch(eventstatus){
     case CHARACTERIZATION:
-      if(this.myChara!=null){           // «Ši•t‚¯ƒCƒxƒ“ƒg‚ÍŠùŠù‚És‚í‚ê‚Ä‚¢‚ê‚Î–³Œø
+      if(this.myChara!=null){           // æ€§æ ¼ä»˜ã‘ã‚¤ãƒ™ãƒ³ãƒˆã¯æ—¢æ—¢ã«è¡Œã‚ã‚Œã¦ã„ã‚Œã°ç„¡åŠ¹
         return true;
       }
       break;
     case ASSOCIATE:
-      if(this.associate!=null){         // ŒğÛƒCƒxƒ“ƒg‚ÍŒğÛ’†‚Å–³Œø
+      if(this.associate!=null){         // äº¤éš›ã‚¤ãƒ™ãƒ³ãƒˆã¯äº¤éš›ä¸­ã§ç„¡åŠ¹
         return true;
       }
-      if( this.marriage!=null &&        // Œ‹¥Ï‚¾‚ÆŠm—¦‚Å•s—Ï
+      if( this.marriage!=null &&        // çµå©šæ¸ˆã ã¨ç¢ºç‡ã§ä¸å€«
         world.successPercent(10))
       {
         return true;
@@ -243,27 +243,27 @@ public class Human extends Animal{
       break;
       
     case BREAKUP:
-      if(this.associate==null){         // •Ê‚êƒCƒxƒ“ƒg‚ÍŒğÛ–³‚µ‚Å–³Œø
+      if(this.associate==null){         // åˆ¥ã‚Œã‚¤ãƒ™ãƒ³ãƒˆã¯äº¤éš›ç„¡ã—ã§ç„¡åŠ¹
         return true;
       }
       break;
 
     case MARRIAGE:
-      if( this.marriage!=null ||        // Œ‹¥ƒCƒxƒ“ƒg‚ÍŠù‚ÉŒ‹¥Ï
-        this.associate==null)           // ‚Ü‚½‚ÍŒğÛ‘Šè‚È‚µ‚Å–³Œø
+      if( this.marriage!=null ||        // çµå©šã‚¤ãƒ™ãƒ³ãƒˆã¯æ—¢ã«çµå©šæ¸ˆ
+        this.associate==null)           // ã¾ãŸã¯äº¤éš›ç›¸æ‰‹ãªã—ã§ç„¡åŠ¹
       {  
         return true;
       }
       break;
     case DIVORCE:
-      if(this.marriage==null){          // —£¥ƒCƒxƒ“ƒg‚Í–¢¥‚Å–³Œø
+      if(this.marriage==null){          // é›¢å©šã‚¤ãƒ™ãƒ³ãƒˆã¯æœªå©šã§ç„¡åŠ¹
         return true;
       }
     break;
-    case CHAILDBORN:                    // oYƒCƒxƒ“ƒg‚Í
-      if( this.getSex()==SEX.male  ||   // ’j 
-        this.marriage==null    ||       // –¢¥
-        this.childenNum >= 5 ){         // q‹Ÿ‚TlˆÈã‚Å–³Œø
+    case CHAILDBORN:                    // å‡ºç”£ã‚¤ãƒ™ãƒ³ãƒˆã¯
+      if( this.getSex()==SEX.male  ||   // ç”· 
+        this.marriage==null    ||       // æœªå©š
+        this.childenNum >= 5 ){         // å­ä¾›ï¼•äººä»¥ä¸Šã§ç„¡åŠ¹
         return true;
       }
       break;
@@ -273,36 +273,36 @@ public class Human extends Animal{
     return false;
   }
   
-  // ƒƒbƒZ[ƒWˆ—
+  // ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å‡¦ç†
   private void msg(String str){
     if(this.getLive()==true){
       world.yearDisp();
-      System.out.println("š"+this.getName() + "i" + this.getAge() + "Îj" + str) ;
+      System.out.println("â˜…"+this.getName() + "ï¼ˆ" + this.getAge() + "æ­³ï¼‰" + str) ;
     }
   }
   
-  //–¼‘O‚ÌƒŠƒXƒg
+  //åå‰ã®ãƒªã‚¹ãƒˆ
   private String[] maleName={
-    "[",
-    "“ñ˜Y",
-    "kì",
-    "—E‹C",
-    "Œ³‹C",
-    "T“ñ",
-    "ƒŠƒ`ƒƒ[ƒh",
-    "ƒWƒ‡ƒj[",
-    "ƒWƒƒƒbƒN",
+    "å……",
+    "äºŒéƒ",
+    "è€•ä½œ",
+    "å‹‡æ°—",
+    "å…ƒæ°—",
+    "æ…äºŒ",
+    "ãƒªãƒãƒ£ãƒ¼ãƒ‰",
+    "ã‚¸ãƒ§ãƒ‹ãƒ¼",
+    "ã‚¸ãƒ£ãƒƒã‚¯",
   };
   private String[] femaleName={
-    "‰pq",
-    "‰Ôq",
-    "’m¢",
-    "”ü",
-    "‚ä‚«",
-    "ƒŒƒC",
-    "‚ ‚¢",
-    "ƒGƒŠ[",
-    "Œb—œ",
+    "è‹±å­",
+    "èŠ±å­",
+    "çŸ¥ä¸–",
+    "ç¾é¦™",
+    "ã‚†ã",
+    "ãƒ¬ã‚¤",
+    "ã‚ã„",
+    "ã‚¨ãƒªãƒ¼",
+    "æµæ¢¨",
   };
 };
 

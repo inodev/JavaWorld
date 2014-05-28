@@ -2,21 +2,21 @@ class Main{
   public static void main(String args[]){
     System.out.println("main method start!!!");
  
-    World world = World.getInstance();            // ¢ŠEƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒXæ“¾
-    world.setYear(2014, 300);                     //@ŠJn”N, ŠÏ@”N”İ’è
+    World world = World.getInstance();            // ä¸–ç•Œã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å–å¾—
+    world.setYear(2014, 300);                     //ã€€é–‹å§‹å¹´, è¦³å¯Ÿå¹´æ•°è¨­å®š
 
     
-    world.setBorn(new Human("ˆê˜Y", SEX.male));    // e‚ª‚¢‚È‚¢ˆ×‰Šúl—Ş‚Íè“®İ’u
-    world.setBorn(new Human("ƒWƒ‡ƒ“", SEX.male));
-    world.setBorn(new Human("¯i", SEX.male));
-    world.setBorn(new Human("Œ’‘¾", SEX.male));  
-    world.setBorn(new Human("‰Ôq", SEX.female));
-    world.setBorn(new Human("‚ß‚®‚İ", SEX.female));
-    world.setBorn(new Human("ƒLƒƒƒTƒŠƒ“", SEX.female));
-    world.setBorn(new Human("“¡q", SEX.female));
+    world.setBorn(new Human("ä¸€éƒ", SEX.male));    // è¦ªãŒã„ãªã„ç‚ºåˆæœŸäººé¡ã¯æ‰‹å‹•è¨­ç½®
+    world.setBorn(new Human("ã‚¸ãƒ§ãƒ³", SEX.male));
+    world.setBorn(new Human("åº„å¸", SEX.male));
+    world.setBorn(new Human("å¥å¤ª", SEX.male));  
+    world.setBorn(new Human("èŠ±å­", SEX.female));
+    world.setBorn(new Human("ã‚ãã¿", SEX.female));
+    world.setBorn(new Human("ã‚­ãƒ£ã‚µãƒªãƒ³", SEX.female));
+    world.setBorn(new Human("è—¤å­", SEX.female));
 
     do{
-      world.pastTime();                            // ƒƒCƒ“ƒ‹[ƒv‚É‚æ‚é¢ŠEŠÔ‚Ìis
+      world.pastTime();                            // ãƒ¡ã‚¤ãƒ³ãƒ«ãƒ¼ãƒ—ã«ã‚ˆã‚‹ä¸–ç•Œæ™‚é–“ã®é€²è¡Œ
     }while(world.getContinueStatus());
     
     System.out.println("main method end!!!");

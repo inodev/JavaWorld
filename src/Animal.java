@@ -3,38 +3,38 @@ enum SEX{
   female,
 };
 
-//=== “®•¨‚ÌƒNƒ‰ƒX ===
-// ¢ŠE‚É‘¶İ‚·‚é“®•¨‚Ì’ŠÛƒNƒ‰ƒXB
-// Human“™‚Ì“®•¨‚Í‚±‚ÌƒNƒ‰ƒX‚ğŒp³‚µ‚ÄŒ`ì‚éB
-// ‘S‚Ä‚Ì“®•¨‚ª‚Â“Á«‚â‹““®‚ğ‹Lq‚·‚éB
+//=== å‹•ç‰©ã®ã‚¯ãƒ©ã‚¹ ===
+// ä¸–ç•Œã«å­˜åœ¨ã™ã‚‹å‹•ç‰©ã®æŠ½è±¡ã‚¯ãƒ©ã‚¹ã€‚
+// Humanç­‰ã®å‹•ç‰©ã¯ã“ã®ã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿ã—ã¦å½¢ä½œã‚‹ã€‚
+// å…¨ã¦ã®å‹•ç‰©ãŒæŒã¤ç‰¹æ€§ã‚„æŒ™å‹•ã‚’è¨˜è¿°ã™ã‚‹ã€‚
 abstract class Animal{
-  private boolean live;    // ¶‘¶ƒtƒ‰ƒO
-  private String  name;    // –¼‘O
-  private int     age;     // ”N—î
-  private SEX     sex;     // «•Ê
+  private boolean live;    // ç”Ÿå­˜ãƒ•ãƒ©ã‚°
+  private String  name;    // åå‰
+  private int     age;     // å¹´é½¢
+  private SEX     sex;     // æ€§åˆ¥
   
-  // ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
   Animal(){
     this.live   = true;
     this.age    = 0;
   }
-  // ŠÔŒo‰ßŒo‰ßƒƒ\ƒbƒh
+  // æ™‚é–“çµŒéçµŒéãƒ¡ã‚½ãƒƒãƒ‰
   public void pastTime(){
     this.event();
     age++;
   }
-  abstract protected int event();              // í‘°•Ê‚ÌŠÔŒo‰ßƒCƒxƒ“ƒg
+  abstract protected int event();              // ç¨®æ—åˆ¥ã®æ™‚é–“çµŒéã‚¤ãƒ™ãƒ³ãƒˆ
   
-  // ƒAƒNƒZƒbƒTƒƒ\ƒbƒh
-  public boolean  getLive(){return this.live;}            // ¶‘¶Šm”F
-  public String   getName(){return this.name;}            // –¼‘Oæ“¾
-  public int    getAge(){return this.age;}                // ”N—îæ“¾
-  public SEX    getSex(){return this.sex;}                // «•Êæ“¾
-  protected void   setName(String name){this.name=name;}  // –¼‘Oİ’è
-  protected void  setSex(SEX sex){this.sex=sex;}          // «•Êİ’è
-  protected void  setDead(){this.live=false;}             // €–S
-  public void    setRevival(){this.live=true;}            // •œŠˆ
-  abstract public boolean love(Animal animal);            // í‘°E«Ši•Ê‚ÌŒğÛğŒiD‚İj
+  // ã‚¢ã‚¯ã‚»ãƒƒã‚µãƒ¡ã‚½ãƒƒãƒ‰
+  public boolean  getLive(){return this.live;}            // ç”Ÿå­˜ç¢ºèª
+  public String   getName(){return this.name;}            // åå‰å–å¾—
+  public int    getAge(){return this.age;}                // å¹´é½¢å–å¾—
+  public SEX    getSex(){return this.sex;}                // æ€§åˆ¥å–å¾—
+  protected void   setName(String name){this.name=name;}  // åå‰è¨­å®š
+  protected void  setSex(SEX sex){this.sex=sex;}          // æ€§åˆ¥è¨­å®š
+  protected void  setDead(){this.live=false;}             // æ­»äº¡
+  public void    setRevival(){this.live=true;}            // å¾©æ´»
+  abstract public boolean love(Animal animal);            // ç¨®æ—ãƒ»æ€§æ ¼åˆ¥ã®äº¤éš›æ¡ä»¶ï¼ˆå¥½ã¿ï¼‰
 };
 
 
